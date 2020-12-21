@@ -4,7 +4,10 @@
   "description": "Presence tracking and more for automation on the room-level",
   "author": "Heiko Rothe <me@heikorothe.com> (https://heikorothe.com)",
   "license": "MIT",
-  "repository": "github:mKeRix/room-assistant",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mKeRix/room-assistant.git"
+  },
   "keywords": [
     "smart home",
     "home automation",
@@ -14,9 +17,13 @@
     "thermopile"
   ],
   "homepage": "https://www.room-assistant.io",
-  "bugs": "https://github.com/mKeRix/room-assistant/issues",
+  "bugs": {
+    "url": "https://github.com/mKeRix/room-assistant/issues"
+  },
   "funding": "https://github.com/mKeRix/room-assistant?sponsor=1",
-  "bin": "./bin/room-assistant.js",
+  "bin": {
+    "room-assistant": "bin/room-assistant.js"
+  },
   "main": "dist/src/main.js",
   "types": "dist/src/main.d.ts",
   "files": [
@@ -71,7 +78,11 @@
     "swagger-ui-express": "^4.1.4",
     "systeminformation": "^4.27.11",
     "update-notifier": "^5.0.1",
-    "winston": "^3.3.3"
+    "winston": "^3.3.3",
+    "@mkerix/noble": "1.9.2-10.1",
+    "i2c-bus": "^5.1.0",
+    "mdns": "^2.5.1",
+    "onoff": "^6.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
@@ -157,5 +168,8 @@
       "@semantic-release/github",
       "@semantic-release/git"
     ]
+  },
+  "directories": {
+    "doc": "docs"
   }
 }
